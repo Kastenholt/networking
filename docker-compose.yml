@@ -1,0 +1,9 @@
+version: "2.0"
+services:
+  app:
+    build: .
+    command: ["pm2-dev", "start", "ecosystem.config.js"]
+    volumes:
+      - "./db:/usr/src/app/db"
+    ports:
+      - "3000:3000"
